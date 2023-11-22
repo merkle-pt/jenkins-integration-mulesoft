@@ -31,13 +31,13 @@
 					<cloudhub2Deployment>
 						<uri>https://anypoint.mulesoft.com</uri>
 						<provider>MC</provider>
-						<environment>Development</environment>
-						<target>private-alias</target>
+						<environment>${ENVIRONMENT}</environment>
+						<target>${TARGET}</target>
 						<muleVersion>4.4.0</muleVersion>
 						<server>anypoint-exchange-v3</server>
-						<applicationName>jenkins-integration-mulesoft</applicationName>
-						<replicas>1</replicas>
-						<vCores>0.1</vCores>
+						<applicationName>${GIT_APP_NAME}</applicationName>
+						<replicas>${REPLICAS}</replicas>
+						<vCores>${VCORES}</vCores>
 						<businessGroupId>4e0798ad-d10a-4e83-989b-e88b85f75b9f</businessGroupId>
 						<integrations>
 							<services>
@@ -47,12 +47,12 @@
 							</services>
 						</integrations>
 						<secureProperties>
-							<secret-key>m!zP6@u*od%n58+g</secret-key>
-							<anypoint.platform.client_id>985108db05fd4dd3bb98e9525a764125</anypoint.platform.client_id>
-							<anypoint.platform.client_secret>5cF54FE0c9914f9b920c4A9c552E9c56</anypoint.platform.client_secret>
+							<secret-key>${SECRET_KEY}</secret-key>
+							<anypoint.platform.client_id>${CLIENT_ID}</anypoint.platform.client_id>
+							<anypoint.platform.client_secret>${CLIENT_SECRET}</anypoint.platform.client_secret>
 						</secureProperties>
 						<properties>
-							<env>dev</env>
+							<env>${ENV}</env>
 							<!-- <api.id>${api-id}</api.id> -->
 							<anypoint.platform.base_uri>https://anypoint.mulesoft.com</anypoint.platform.base_uri>
 							<anypoint.platform.analytics_base_uri>https://analytics-ingest.anypoint.mulesoft.com</anypoint.platform.analytics_base_uri>
